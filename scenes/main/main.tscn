@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://uf0baqumm7rs"]
+
+[ext_resource type="PackedScene" uid="uid://fgje7ebpc3tb" path="res://objects/player/player.tscn" id="1_hyk8p"]
+[ext_resource type="PackedScene" uid="uid://c0p5lkgyn22eg" path="res://objects/block/block.tscn" id="2_iuonh"]
+[ext_resource type="PackedScene" uid="uid://yqeu3mxfh62j" path="res://objects/block-2/block-2.tscn" id="3_k2fmo"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iuonh"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_k2fmo"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_l3cfh"]
+
+[node name="main" type="Node2D" unique_id=866246811]
+
+[node name="player" parent="." unique_id=922827622 instance=ExtResource("1_hyk8p")]
+position = Vector2(16, 16)
+
+[node name="block" parent="." unique_id=1336387432 instance=ExtResource("2_iuonh")]
+position = Vector2(138, 42)
+
+[node name="block2" parent="." unique_id=1315012859 instance=ExtResource("2_iuonh")]
+position = Vector2(238, 42)
+
+[node name="block-2" parent="." unique_id=680195178 instance=ExtResource("3_k2fmo")]
+position = Vector2(335, 42)
+
+[node name="block-2 2" parent="." unique_id=2133702631 instance=ExtResource("3_k2fmo")]
+position = Vector2(436, 42)
+
+[node name="wall" type="StaticBody2D" parent="." unique_id=102908071]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall" unique_id=1199702592]
+shape = SubResource("WorldBoundaryShape2D_iuonh")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="wall" unique_id=1901070076]
+rotation = 3.1415927
+shape = SubResource("WorldBoundaryShape2D_k2fmo")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="wall" unique_id=1567348165]
+position = Vector2(1280, 720)
+shape = SubResource("WorldBoundaryShape2D_l3cfh")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="wall" unique_id=1408082209]
+position = Vector2(1280, 720)
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_l3cfh")
