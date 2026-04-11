@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://fgje7ebpc3tb" path="res://objects/player/player.tscn" id="1_hyk8p"]
 [ext_resource type="PackedScene" uid="uid://c0p5lkgyn22eg" path="res://objects/block/block.tscn" id="2_iuonh"]
 [ext_resource type="PackedScene" uid="uid://yqeu3mxfh62j" path="res://objects/block-2/block-2.tscn" id="3_k2fmo"]
+[ext_resource type="PackedScene" uid="uid://bgm3ywhci01p1" path="res://objects/ball/ball.tscn" id="4_l3cfh"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iuonh"]
 normal = Vector2(1, 0)
@@ -10,6 +11,9 @@ normal = Vector2(1, 0)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_k2fmo"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_l3cfh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k2fmo"]
+size = Vector2(250, 12)
 
 [node name="main" type="Node2D" unique_id=866246811]
 
@@ -28,6 +32,12 @@ position = Vector2(335, 42)
 [node name="block-2 2" parent="." unique_id=2133702631 instance=ExtResource("3_k2fmo")]
 position = Vector2(436, 42)
 
+[node name="ball" parent="." unique_id=840323091 instance=ExtResource("4_l3cfh")]
+position = Vector2(1164, 57)
+
+[node name="ball2" parent="." unique_id=1442318284 instance=ExtResource("4_l3cfh")]
+position = Vector2(1029, 77)
+
 [node name="wall" type="StaticBody2D" parent="." unique_id=102908071]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wall" unique_id=1199702592]
@@ -45,3 +55,40 @@ shape = SubResource("WorldBoundaryShape2D_l3cfh")
 position = Vector2(1280, 720)
 rotation = -1.5707964
 shape = SubResource("WorldBoundaryShape2D_l3cfh")
+
+[node name="board" type="StaticBody2D" parent="." unique_id=1653889946]
+position = Vector2(126, 353)
+
+[node name="ColorRect" type="ColorRect" parent="board" unique_id=756231935]
+offset_left = -125.0
+offset_top = -6.0
+offset_right = 125.0
+offset_bottom = 6.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="board" unique_id=992532564]
+shape = SubResource("RectangleShape2D_k2fmo")
+
+[node name="board2" type="StaticBody2D" parent="." unique_id=575670542]
+position = Vector2(946, 414)
+
+[node name="ColorRect" type="ColorRect" parent="board2" unique_id=188864972]
+offset_left = -125.0
+offset_top = -6.0
+offset_right = 125.0
+offset_bottom = 6.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="board2" unique_id=234589194]
+shape = SubResource("RectangleShape2D_k2fmo")
+
+[node name="board3" type="StaticBody2D" parent="." unique_id=255289074]
+position = Vector2(1161, 250.00003)
+rotation = -0.62133723
+
+[node name="ColorRect" type="ColorRect" parent="board3" unique_id=895769785]
+offset_left = -125.0
+offset_top = -6.0
+offset_right = 125.0
+offset_bottom = 6.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="board3" unique_id=1664795863]
+shape = SubResource("RectangleShape2D_k2fmo")

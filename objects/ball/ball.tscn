@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bgm3ywhci01p1"]
+
+[ext_resource type="Script" uid="uid://cug7hbekyfo6k" path="res://addons/primitive_shapes/circle.gd" id="1_etdk3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sqa05"]
+radius = 20.024984
+
+[node name="ball" type="RigidBody2D" unique_id=840323091]
+
+[node name="Circle" type="Node2D" parent="." unique_id=1332050]
+script = ExtResource("1_etdk3")
+radius = 20.0
+color = Color(0.7865344, 0.55840546, 0.25134602, 1)
+metadata/_custom_type_script = "uid://cug7hbekyfo6k"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=412786207]
+shape = SubResource("CircleShape2D_sqa05")
