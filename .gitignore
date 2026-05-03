@@ -4,5 +4,6 @@
 
 addons
 .plugged
+langs/*.translation
 
 .vs

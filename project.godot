@@ -57,6 +57,10 @@ moveDown={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://langs/lang.zh_CN.translation", "res://langs/lang.en_US.translation")
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

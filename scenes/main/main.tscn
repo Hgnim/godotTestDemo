@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c0p5lkgyn22eg" path="res://objects/block/block.tscn" id="2_iuonh"]
 [ext_resource type="PackedScene" uid="uid://yqeu3mxfh62j" path="res://objects/block-2/block-2.tscn" id="3_k2fmo"]
 [ext_resource type="PackedScene" uid="uid://bgm3ywhci01p1" path="res://objects/ball/ball.tscn" id="4_l3cfh"]
+[ext_resource type="PackedScene" uid="uid://3uh2k1eqj6lm" path="res://objects/text/text.tscn" id="5_6q06x"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iuonh"]
 normal = Vector2(1, 0)
@@ -92,3 +93,6 @@ offset_bottom = 6.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="board3" unique_id=1664795863]
 shape = SubResource("RectangleShape2D_k2fmo")
+
+[node name="text" parent="." unique_id=441725578 instance=ExtResource("5_6q06x")]
+position = Vector2(829, 51)
